@@ -244,7 +244,7 @@ Here are some screenshots of the application's interface:
   ![Interface Screenshot 1](./src/assets/images/interfaz-1.png)
 
 - **Interface Screenshot 2**:
-  ![Interface Screenshot 2](./images/assets/images/interfaz-2.png)
+  ![Interface Screenshot 2](./src/assets/images/interfaz-2.png)
 
 - **Interface Screenshot 3**:
-  ![Interface Screenshot 3](./images/assets/images/interfaz-3.png)
+  ![Interface Screenshot 3](./src/assets/images/interfaz-3.png)
