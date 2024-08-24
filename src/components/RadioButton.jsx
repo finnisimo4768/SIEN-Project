@@ -2,9 +2,8 @@ import PropTypes from "prop-types";
 
 const RadioButton = ({ selectedValue, handleRadioChange }) => {
   return (
-    <div className="relative flex w-full max-w-[24rem] flex-col rounded-xl bg-gray-900 bg-clip-border text-white shadow-md">
+    <div className="relative flex w-full max-w-[25rem] flex-col rounded-xl bg-gray-900 bg-clip-border text-white shadow-md">
       <nav className="flex min-w-[240px] flex-row gap-1 p-2 font-sans text-base font-normal text-blue-gray-700 pl-1">
-        {/* Radio button for "Normal" sorting */}
         <div
           role="button"
           className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
@@ -47,7 +46,6 @@ const RadioButton = ({ selectedValue, handleRadioChange }) => {
           </label>
         </div>
 
-        {/* Radio button for "Ascending" sorting */}
         <div
           role="button"
           className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
@@ -90,7 +88,6 @@ const RadioButton = ({ selectedValue, handleRadioChange }) => {
           </label>
         </div>
 
-        {/* Radio button for "Descending" sorting */}
         <div
           role="button"
           className="flex items-center w-full p-0 leading-tight transition-all rounded-lg outline-none text-start hover:bg-blue-gray-50 hover:bg-opacity-80 hover:text-blue-gray-900 focus:bg-blue-gray-50 focus:bg-opacity-80 focus:text-blue-gray-900 active:bg-blue-gray-50 active:bg-opacity-80 active:text-blue-gray-900"
@@ -137,10 +134,9 @@ const RadioButton = ({ selectedValue, handleRadioChange }) => {
   );
 };
 
-// Define PropTypes for type checking and validation
 RadioButton.propTypes = {
-  selectedValue: PropTypes.string.isRequired, // The currently selected value for the radio buttons
-  handleRadioChange: PropTypes.func.isRequired, // Function to handle radio button changes
+  selectedValue: PropTypes.string.isRequired,
+  handleRadioChange: PropTypes.func.isRequired,
 };
 
 export default RadioButton;
