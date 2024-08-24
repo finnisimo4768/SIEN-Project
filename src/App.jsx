@@ -13,30 +13,34 @@ const App = () => {
   const [wordCount, setWordCount] = useState([]);
   const [selectedRadio, setSelectedRadio] = useState("Normal");
 
+  // Effect to recalculate the word count whenever textValue or selectedRadio changes
   useEffect(() => {
     countWords(setWordCount, textValue, selectedRadio);
   }, [textValue, selectedRadio]);
 
+  // Handler for textarea changes, updates the textValue state
   const handleChange = (e) => {
     e.preventDefault();
     setTextValue(e.target.value);
   };
 
+  // Handler for the onCopy event on the textarea, logs the copied text
   const handleCopy = (e) => {
-    console.log("Texto copiado:", e.clipboardData.getData("text"));
+    console.log("Copied text:", e.clipboardData.getData("text"));
   };
 
+  // Handler for radio button changes
   const handleRadioChange = (e) => {
     setSelectedRadio(e.target.value);
   };
 
-  console.log(wordCount);
-
   return (
     <BrowserRouter>
       <div className="bg-gray-800 h-screen">
+        {/* Navbar is included on all pages */}
         <Navbar />
         <div className="flex justify-center items-center mt-7 gap-9">
+          {/* Textarea for user input or pasting text */}
           <textarea
             className="w-96 h-48 resize-none rounded-md bg-gray-900 placeholder:text-center p-4"
             style={{ color: "white" }}
@@ -45,6 +49,7 @@ const App = () => {
             onChange={handleChange}
             onCopy={handleCopy}
           ></textarea>
+          {/* RadioButton component to select the counting mode */}
           <RadioButton
             selectedValue={selectedRadio}
             handleRadioChange={handleRadioChange}
@@ -52,6 +57,7 @@ const App = () => {
           />
         </div>
         <Routes>
+          {/* Routes for the app pages */}
           <Route
             path="/barchart"
             element={<BarChartPage wordcount={wordCount} />}
