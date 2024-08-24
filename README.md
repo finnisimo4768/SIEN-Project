@@ -14,7 +14,7 @@ The SIEN project is a web application designed to perform word counting and disp
 
 - **Vitest**: A testing framework for Vite projects. Vitest is used to run unit and integration tests for the application.
 
-- **ESLint**: A tool for identifying and fixing problems in JavaScript code. ESLint is used to enforce coding standards and improve code quality.
+- **ESLint**: A tool for identifying and fixing problems in JavaScript code. ESLint helps maintain code quality and consistency across the project.
 
 - **pnpm**: A fast and efficient package manager for JavaScript. pnpm is used to manage project dependencies.
 
@@ -31,6 +31,20 @@ The SIEN project is a web application designed to perform word counting and disp
 - **@testing-library/react**: A library for testing React components. It provides utilities to render and interact with React components in tests.
 
 - **@types/react** and **@types/react-dom**: TypeScript type definitions for React and React DOM. These are used for TypeScript projects to provide type checking and code completion.
+
+## Prerequisites
+
+To run this project, you need to have the following installed:
+
+- **Node.js**: A JavaScript runtime built on Chrome's V8 JavaScript engine. Download and install Node.js from [nodejs.org](https://nodejs.org/en).
+
+- **npm**: The Node.js package manager, which comes bundled with Node.js. npm is used to manage project dependencies.
+
+Optionally, you can use **pnpm** as the package manager for this project. If you do not have pnpm installed, you can install it using npm:
+
+```bash
+npm install -g pnpm
+```
 
 ## Clone the Repository
 
@@ -56,10 +70,18 @@ cd SIEN-Project
 
 ## Install Dependencies
 
-Once you are in the project directory, install the required dependencies using pnpm. pnpm is a fast and efficient package manager.
+Once you are in the project directory, install the required dependencies. You can use either `pnpm` or `npm`.
+
+**Using pnpm:**
 
 ```bash
 pnpm install
+```
+
+**Using npm:**
+
+```bash
+npm install
 ```
 
 This will install all the dependencies listed in the `package.json` file.
@@ -70,50 +92,114 @@ Below is a list of available commands you can use during development, testing, a
 
 - **`dev`**: Starts the development server. This command is used to run the application in development mode. The application will be available at [http://localhost:5173/](http://localhost:5173/). Use this command to see changes live as you develop.
 
+  **Using pnpm:**
+
   ```bash
   pnpm dev
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run dev
+  ```
+
 - **`build`**: Builds the application for production. This command compiles the source code into optimized files that are suitable for deployment. The output will be placed in the `dist` directory.
+
+  **Using pnpm:**
 
   ```bash
   pnpm build
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run build
+  ```
+
 - **`lint`**: Runs ESLint to analyze the code for style issues and errors. ESLint helps maintain code quality and consistency across the project.
+
+  **Using pnpm:**
 
   ```bash
   pnpm lint
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run lint
+  ```
+
 - **`preview`**: Previews the built application. This command starts a local server to serve the production build. Use it after building the application to test how it will behave in a production environment.
+
+  **Using pnpm:**
 
   ```bash
   pnpm preview
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run preview
+  ```
+
 - **`test`**: Runs the project tests using Vitest. This command executes all the test cases defined in the project to ensure that the application functions as expected.
+
+  **Using pnpm:**
 
   ```bash
   pnpm test
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run test
+  ```
+
 - **`coverage`**: Runs the tests and generates a code coverage report. This report provides insights into which parts of the code are covered by tests and which are not.
+
+  **Using pnpm:**
 
   ```bash
   pnpm coverage
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run coverage
+  ```
+
 - **`check`**: Runs ESLint to check all project files with extensions `.js`, `.jsx`, `.ts`, `.tsx` for any style issues or errors.
+
+  **Using pnpm:**
 
   ```bash
   pnpm check
   ```
 
+  **Using npm:**
+
+  ```bash
+  npm run check
+  ```
+
 - **`fix`**: Automatically fixes style issues and errors in all project files using ESLint. This command helps to clean up code by applying fixes where possible.
+
+  **Using pnpm:**
 
   ```bash
   pnpm fix
+  ```
+
+  **Using npm:**
+
+  ```bash
+  npm run fix
   ```
 
 ## Text Area for Input
@@ -144,8 +230,21 @@ Users can select their preferred display option using radio buttons, which will 
 
 ## Access the Application
 
-After starting the development server with the `pnpm dev` command, you can access the application in your web browser at the following URL:
+After starting the development server with the `pnpm dev` or `npm run dev` command, you can access the application in your web browser at the following URL:
 
 [http://localhost:5173/](http://localhost:5173/)
 
 This URL will load the application where you can interact with it and view the results of the word counting functionality.
+
+## Interface Screenshots
+
+Here are some screenshots of the application's interface:
+
+- **Interface Screenshot 1**:
+  ![Interface Screenshot 1](./src/assets/images/interfaz-1.png)
+
+- **Interface Screenshot 2**:
+  ![Interface Screenshot 2](./images/assets/images/interfaz-2.png)
+
+- **Interface Screenshot 3**:
+  ![Interface Screenshot 3](./images/assets/images/interfaz-3.png)
